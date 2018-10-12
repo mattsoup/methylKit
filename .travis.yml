@@ -8,7 +8,7 @@ language: R
 sudo: false
 warnings_are_errors: false
 cache: packages
-r: bioc-devel
+r: bioc-release
 
 
 
