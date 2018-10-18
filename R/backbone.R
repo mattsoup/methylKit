@@ -1177,7 +1177,7 @@ setMethod("unite", "methylRawList",
       df2=data.table(df2,key=c("chr","start","end","strand"))
       # merge the dat to a data.frame
       df=merge(df,df2,by=c("chr","start","end","strand"),
-               suffixes=c(as.character(i-1),as.character(i) ) ) 
+               suffixes=c(as.character(i-1),as.character(i) ), all=TRUE ) # MAC added all=TRUE to keep all base positions 
       #df=df[df2, nomatch=FALSE]
     }else{
       df2=data.table(df2,key=c("chr","start","end","strand") )
